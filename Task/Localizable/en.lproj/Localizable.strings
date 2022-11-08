@@ -1,0 +1,158 @@
+/* 
+  Localizable.strings
+  shamel
+
+  Created by admin on 7/31/20.
+  Copyright © 2020 greenhat. All rights reserved.
+*/
+
+
+/***
+    name -> TWO CASES
+        -- empty
+        -- wrong
+    ---------
+ */
+
+"validation_empty_name" = "The field (@@) should not be blank";
+"validation_wrong_name" = "The field (@@) must be at least 2 characters and no more than 50 characters. Only numbers and letters";
+
+/***
+     email -> TWO CASES
+        -- empty
+        -- wrong
+     --------------------
+ **/
+
+"validation_empty_email" = "(@@) should not be blank";
+"validation_wrong_email" = "Formula Error (@@)";
+
+/***
+     verification_code -> TWO CASES
+        -- empty
+        -- wrong
+     --------------------
+ **/
+
+"validation_empty_verification_code" = "(@@) is incorrect";
+"validation_wrong_verification_code" = "(@@) you entered is not correct";
+
+
+/***
+     phone -> TWO CASES
+        -- empty
+        -- wrong
+     --------------------
+ **/
+
+"validation_empty_phone" = "(@@) should not be blank";
+"validation_wrong_eg_phone" = "(@@) is incorrect";
+"validation_wrong_forign_phone" = "(@@) is incorrect";
+
+
+
+/***
+     array -> ONE CASES
+        -- empty
+     --------------------
+ **/
+
+
+"validation_empty_array" = "(@@) must have at least one element";
+
+/***
+    number -> ONE CASES
+       -- empty
+    --------------------
+**/
+
+
+"validation_is_not_number" = "select (@@)";
+
+
+/***
+    password -> THREE CASES
+       -- empty
+       -- wrong
+       -- not match
+    --------------------
+**/
+
+"validation_empty_password" = "enter (@@)";
+"validation_wrong_password" = "(@@) must consist of at least (!!) and at most (16) characters, preferably twelve or more symbols.";
+"validation_password_not_match" = "(@@) and password confirmation do not match";
+
+
+/***
+    min/max -> THREE CASES
+       -- word
+       -- number
+    --------------------
+**/
+
+"number_should_exceed_minimum_value" = "(@@) should be chosen";
+"word_should_exceed_minimum_value" = "(@@) should be at least (!!) characters";
+
+"number_should_not_exceed_maximum_value" = "The number of (@@) selected must not exceed (!!)";
+"word_should_not_exceed_maximum_value" = "(@@) you entered must not exceed (!!) characters";
+
+
+
+/***
+    time, date -> ONE CASE
+       -- wrong
+    --------------------
+**/
+
+"validation_time_error" = "Incorrect formula (@@) should be in the following format (!!)";
+"validation_date_error" = "Incorrect formula (@@) should be in the following format (!!)";
+"not_a_time" = "(@@) is incorrect";
+"not_a_date" = "(@@) is incorrect";
+
+
+/***
+    alertfit
+    --------------------
+**/
+
+"are_u_sure" = "Are you sure ?";
+"ar" = "Ar";
+"en" = "En";
+"currency" = "L.E";
+"Ok" = "OK";
+"Cancel" = "CANCEL";
+"app_name" = "";
+
+/** MARK: -
+ ----------------------------------------------------
+ | MedicinVc
+ ----------------------------------------------------
+ */
+ 
+"medicine_title" = "Search";
+"medicine_add_to_card_button" = "Add To Cart";
+"medicine_added_successfully" = "Product Added Successfully";
+
+/** MARK: -
+ ----------------------------------------------------
+ | CartVC
+ ----------------------------------------------------
+ */
+ 
+"cart_title" = "Search";
+"cart_confirm_button" = "Confirm Order";
+
+/** MARK: -
+ ----------------------------------------------------
+ | CheckOut
+ ----------------------------------------------------
+ */
+ 
+
+"check_out_title" = "Cart";
+"check_out_search_placeholder" = "Write the medicine Name";
+"check_out_products_count" = "Products x";
+"check_out_delivery_fee" = "Delivery Fee";
+"check_out_depend_on_area" = "Varies by region";
+"check_out_depend_on_pharmacy" = "Product Price Varies by Pharmacies";
+"check_out_button" = "Check Out";

@@ -1,0 +1,168 @@
+/* 
+  Localizable.strings
+  shamel
+
+  Created by admin on 7/31/20.
+  Copyright © 2020 greenhat. All rights reserved.
+*/
+
+/***
+    name -> TWO CASES
+        -- empty
+        -- wrong
+    ---------
+ */
+"validation_empty_name" = "الحقل (@@) لايجب ان يكون فارغا";
+"validation_wrong_name" = "الحقل (@@) يجب ان لايقل عن حرفين ولايزيد عن خمسين حرفا ارقام وحروف فقط";
+
+
+/***
+    address -> TWO CASES
+        -- empty
+        -- wrong
+    ---------
+ */
+"validation_empty_address" = "الحقل (@@) لايجب ان يكون فارغا";
+"validation_wrong_address" = "الحقل (@@) يجب ان لايقل عن حرفين ولايزيد عن ٤٠٠ حرفا ارقام وحروف فقط";
+
+
+/***
+     email -> TWO CASES
+        -- empty
+        -- wrong
+     --------------------
+ **/
+
+"validation_empty_email" = "لايجب ان يكون (@@) فارغا";
+"validation_wrong_email" = "خطأ في صيغة (@@)";
+
+
+/***
+     verification_code -> TWO CASES
+        -- empty
+        -- wrong
+     --------------------
+ **/
+
+"validation_empty_verification_code" = "(@@) غير صحيح";
+"validation_wrong_verification_code" = "(@@) الذي ادخلته غير صحيح";
+
+
+/***
+     phone -> TWO CASES
+        -- empty
+        -- wrong
+     --------------------
+ **/
+
+"validation_empty_phone" = "لايجب ان يكون (@@) فارغا";
+"validation_wrong_eg_phone" = "(@@) غير صحيح";
+"validation_wrong_forign_phone" = "(@@) غير صحيح";
+
+
+
+/***
+     array -> ONE CASES
+        -- empty
+     --------------------
+ **/
+
+
+"validation_empty_array" = "يجب ان تحتوي (@@) علي عنصر علي الاقل";
+
+/***
+    number -> ONE CASES
+       -- empty
+    --------------------
+**/
+
+
+"validation_is_not_number" =  "اختار (@@)";
+
+
+/***
+    password -> THREE CASES
+       -- empty
+       -- wrong
+       -- not match
+    --------------------
+**/
+
+"validation_empty_password" = "ادخل (@@)";
+"validation_wrong_password" = "يجب أن تتكون (@@) من (!!) أحرف على الأقل و (16) علي الاكثر، ويفضل إستخدام إثنتي عشرة رمزا أو أكثر.";
+"validation_password_not_match" = "(@@) وتاكيد كلمه المرور غير متطابقتان";
+
+
+/***
+    min/max -> THREE CASES
+       -- word
+       -- number
+    --------------------
+**/
+
+"number_should_exceed_minimum_value" = "يجب اختيار (@@) ";
+"word_should_exceed_minimum_value" = "(@@) يجب ان لاتقل عن (!!) أحرف";
+
+"number_should_not_exceed_maximum_value" = "لايجد ان يزيد عدد ال (@@) المختاره عن (!!)";
+"word_should_not_exceed_maximum_value" = "(@@) الذي ادخلته يجب ان لايزيد عن (!!) احرف";
+
+/***
+    time, date -> ONE CASE
+       -- wrong
+    --------------------
+**/
+
+"validation_time_error" = "صيغه (@@) غير صحيحه يجب ان تكون ع الشكل التالي (!!)";
+"validation_date_error" = "صيغه (@@) غير صحيحه يجب ان تكون ع الشكل التالي (!!)";
+"not_a_time" = "(@@) غير صحيح";
+"not_a_date" = "(@@) غير صحيح";
+
+
+
+/***
+    alertfit
+    --------------------
+**/
+
+"are_u_sure" = "هل انت متاكد ؟";
+"ar" = "عربي";
+"en" = "En";
+"currency" = "جنية";
+"Ok" = "تاكيد";
+"Cancel" = "إلفاء";
+"app_name" = "";
+
+
+/** MARK: -
+ ----------------------------------------------------
+ | MedicinVc
+ ----------------------------------------------------
+ */
+ 
+"medicine_title" = "البحث";
+"medicine_add_to_card_button" = "اضف للعربة";
+"medicine_added_successfully" = "تم اضافة المنتج بنجاح";
+
+/** MARK: -
+ ----------------------------------------------------
+ | CartVC
+ ----------------------------------------------------
+ */
+ 
+"cart_title" = "البحث";
+"cart_confirm_button" = "تاكيد الطلب";
+
+/** MARK: -
+ ----------------------------------------------------
+ | CheckOut
+ ----------------------------------------------------
+ */
+ 
+
+"check_out_title" = "العربة";
+"check_out_search_placeholder" = "كتابة اسم الدواء";
+"check_out_products_count" = "المنتجات x";
+"check_out_delivery_fee" = "ضريبة التوصيل";
+"check_out_depend_on_area" = "تختلف حسب المنطقة";
+"check_out_depend_on_pharmacy" = "سعر المنتج قد يختلف باختلاف الصيدليات";
+"check_out_button" = "تنفيذ";
