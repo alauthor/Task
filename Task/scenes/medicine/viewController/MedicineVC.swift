@@ -41,10 +41,16 @@ class MedicineVC: UIViewController {
          -> WRITE YOUR CODE HERE ->
          */
         
+        searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
         searchTextField.set(iconView: "ic_search_icon", padding: 10).set(corner: 10).clear()
         setupNavigationBar()
         setupNavigationItemButtons()
         setupTableView()
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        self.presenter.search(text: (textField.text ?? "") )
     }
     
     override func viewDidAppear(_ animated: Bool) {

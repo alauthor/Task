@@ -37,23 +37,28 @@ class CartWorker {
         completionHandler(carts, nil)
     }
     
-    func setCart(request: CartRequestModel)
+    func setCart(request: CartRequestModel) -> String
     {
-        var count = self.networkLayer.objects(Cart.self).count
-        if request.increaseCount {
-            count += 1
+        if let _ = self.networkLayer.object(ofType: Cart.self, forPrimaryKey: request.id) {
+            return "medicine_already_in_cart".localized
         }
         
-        let cart = Cart(id: request.id, name: request.name, desc: request.desc, price: request.price, imageUrl: request.imageUrl, count: count)
+//        var count = self.networkLayer.objects(Cart.self).count
+//        if request.increaseCount {
+//            count += 1
+//        }
+//
+        let cart = Cart(id: request.id, name: request.name, desc: request.desc, price: request.price, imageUrl: request.imageUrl, count: 1)
         try! self.networkLayer.write {
             self.networkLayer.add(cart)
         }
+        return "medicine_added_successfully".localized
     }
     
     func changeQty(cartId: Int, increase: Bool = false) //, completionHandler: @escaping (_: [Cart], _: Error?) -> Void) -> [Cart]
     {
         if let cart = self.networkLayer.object(ofType: Cart.self, forPrimaryKey: cartId) {
-            let count = (increase == true) ? (cart.count + 1) : (cart.count <= 0) ? cart.count : (cart.count - 1)
+            let count = (increase == true) ? (cart.count + 1) : (cart.count <= 1) ? cart.count : (cart.count - 1)
             try! self.networkLayer.write {
                 cart.setValue(count, forKey: "count")
             }

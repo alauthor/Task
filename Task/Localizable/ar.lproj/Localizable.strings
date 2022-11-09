@@ -142,7 +142,7 @@
 "medicine_title" = "البحث";
 "medicine_add_to_card_button" = "اضف للعربة";
 "medicine_added_successfully" = "تم اضافة المنتج بنجاح";
-
+"medicine_already_in_cart" = "هـذا المنتج بالفعل مسبقا";
 /** MARK: -
  ----------------------------------------------------
  | CartVC

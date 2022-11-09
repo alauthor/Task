@@ -43,11 +43,16 @@ class CartVC: UIViewController {
          -> WRITE YOUR CODE HERE ->
          */
         
+        searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         checkOutButtonContainerView.set(corners: [.topLeft, .topRight], radius: 24).clear()
         searchTextField.set(iconView: "ic_search_icon", padding: 10).set(corner: 12).clear()
         setupNavigationBar()
         setupNavigationBack()
         setupTableView()
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        self.presenter.search(text: (textField.text ?? "") )
     }
     
     override func viewDidAppear(_ animated: Bool) {

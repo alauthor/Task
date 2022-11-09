@@ -24,7 +24,7 @@ class MedicineVCPresenter
     private var increaseBy = 10
     private var totalPages = 0
     private var currentPage = 0
-    
+    private var medicinesCopy = [Medicine]()
     /**
      -> FUNCTIONS
      ===================================
@@ -72,6 +72,7 @@ extension MedicineVCPresenter
             self.currentPage = response?.CurrentPage ?? 0
             self.totalPages = response?.PageCount ?? 0
             self.medicines += response?.complaints ?? []
+            self.medicinesCopy = self.medicines
             self.view.reloadData()
         }
     }
@@ -82,6 +83,23 @@ extension MedicineVCPresenter
             self.viewDidLoad()
         }
         return
+    }
+    
+    internal func search(text: String) {
+        if text == "" {
+            self.medicines = medicinesCopy
+            self.view.reloadData()
+            return
+        }
+        self.medicines = []
+        medicinesCopy.forEach { [weak self] med in
+            guard let self = self else { return }
+            let model = MedicineViewModel(model: med)
+            if model.name.lowercased().contains(text) {
+                self.medicines.append(med)
+            }
+        }
+        self.view.reloadData()
     }
     
     /**
@@ -109,8 +127,8 @@ extension MedicineVCPresenter
     
     private func addToCart(medicine: Medicine) {
         let request = self.cartWorker.convertMedicineToLocalCart(medicine: medicine)
-        self.cartWorker.setCart(request: request)
-        self.router.displayToast(message: "medicine_added_successfully".localized)
+        let result = self.cartWorker.setCart(request: request)
+        self.router.displayToast(message: result)
     }
     
     func didSelectRow(at index: Int)

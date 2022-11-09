@@ -21,6 +21,7 @@ class CartVCPresenter
     private var router: CartVCRouter!
     private var worker: CartWorker!
     private var carts = [Cart]()
+    private var cartsCopy = [Cart]()
     
     /**
      -> FUNCTIONS
@@ -65,6 +66,7 @@ extension CartVCPresenter
                 return
             }
             self.carts = carts
+            self.cartsCopy = carts
             self.view.reloadData()
             self.view.displayCartPrice(price: self.calPrice())
         }
@@ -73,13 +75,30 @@ extension CartVCPresenter
     private func calPrice() -> String {
         var total: Float = 0.0
         self.carts.forEach { cart in
-            total += cart.price
+            total += (Float(cart.count) * cart.price)
         }
         return "\(total) " + "currency".localized
     }
     
     func openCheckOut() {
         self.router.open(.CheckOut, .pushable)
+    }
+    
+    internal func search(text: String) {
+        if text == "" {
+            self.carts = cartsCopy
+            self.view.reloadData()
+            return
+        }
+        self.carts = []
+        cartsCopy.forEach { [weak self] cart in
+            guard let self = self else { return }
+            let model = CartViewModel(model: cart)
+            if model.name.lowercased().contains(text) {
+                self.carts.append(cart)
+            }
+        }
+        self.view.reloadData()
     }
     
     /**

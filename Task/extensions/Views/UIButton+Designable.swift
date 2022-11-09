@@ -8,7 +8,7 @@
 
 import UIKit
 import MOLH
-import MBRadioCheckboxButton
+//import MBRadioCheckboxButton
 
 extension UIButton {
     
@@ -41,9 +41,9 @@ extension UIButton {
     
     open override func awakeFromNib() {
         super.awakeFromNib()
-        guard (self is RadioButton || self is CheckboxButton ) && MOLHLanguage.currentAppleLanguage() == "ar" else { return }
-        self.transform = CGAffineTransform(scaleX: -1, y: 1)
-        self.titleLabel?.transform = CGAffineTransform(scaleX: -1, y: 1)
+//        guard (self is RadioButton || self is CheckboxButton ) && MOLHLanguage.currentAppleLanguage() == "ar" else { return }
+//        self.transform = CGAffineTransform(scaleX: -1, y: 1)
+//        self.titleLabel?.transform = CGAffineTransform(scaleX: -1, y: 1)
     }
     
     /**

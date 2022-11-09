@@ -73,7 +73,6 @@
 		F9842991291850F600325419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984298F291850F600325419 /* Main.storyboard */; };
 		F9842993291850F700325419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9842992291850F700325419 /* Assets.xcassets */; };
 		F9842996291850F700325419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9842994291850F700325419 /* LaunchScreen.storyboard */; };
-		F9BE11E5291AA2E80082024F /* UILabel+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE11E4291AA2E80082024F /* UILabel+Customization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,7 +147,6 @@
 		F9842990291850F600325419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9842992291850F700325419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9842995291850F700325419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F9BE11E4291AA2E80082024F /* UILabel+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Customization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +214,6 @@
 				F907A068291853960004D32D /* UIButton+Designable.swift */,
 				F907A069291853960004D32D /* UIImageView+Designable.swift */,
 				F907A06A291853960004D32D /* UITextField+Designable.swift */,
-				F9BE11E4291AA2E80082024F /* UILabel+Customization.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -713,7 +710,6 @@
 				F907A0BC291853970004D32D /* Loading.swift in Sources */,
 				F907A0AC291853970004D32D /* Theme.swift in Sources */,
 				F907A0A6291853970004D32D /* UITextField+Localized.swift in Sources */,
-				F9BE11E5291AA2E80082024F /* UILabel+Customization.swift in Sources */,
 				F984298A291850F600325419 /* AppDelegate.swift in Sources */,
 				F9179B3429199DE400960C25 /* CartWorker.swift in Sources */,
 				F907A0B3291853970004D32D /* EndPoint.swift in Sources */,

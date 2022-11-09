@@ -10,15 +10,8 @@ target 'Task' do
   pod 'Alertift'
   pod 'IQKeyboardManagerSwift'
   pod 'MaterialComponents/ActivityIndicator'
-  pod 'DropDown'
-  pod 'MBRadioCheckboxButton'
-  pod 'XLPagerTabStrip'
   pod 'MOLH'
-  pod 'UITextView+Placeholder'
-  pod 'Tatsi'
-  pod 'SwiftDate'
   pod 'FittedSheets'
   pod 'RealmSwift', '~>10'
 
-  
 end
